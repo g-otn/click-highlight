@@ -1,0 +1,24 @@
+{
+  "author": "g-otn",
+  "description": "Creates a minimal ripple animation wherever the user clicks",
+  "manifest_version": 2,
+  "name": "Click Highlight",
+  "version": "1.0",
+  "homepage_url": "https://github.com",
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "css": [
+        "click-highlight.css"
+      ],
+      "matches": [
+        "*://*/*"
+      ],
+      "match_about_blank": true,
+      "js": [
+        "click-highlight.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

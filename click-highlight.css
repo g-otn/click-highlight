@@ -1,0 +1,51 @@
+._click-animation {
+  /* Basic CSS reset */
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2147483647;
+  pointer-events: none;
+  border-radius: 100px;
+  border-width: 5px;;
+  border-style: solid;
+
+  width: 0px;
+  height: 0px;
+  opacity: 1;
+
+  animation: drop .5s ease-out 1;
+  transform: translate(-50%, -50%);
+}
+
+._click-animation._click-animation-left {
+  border-color: red !important;
+}
+
+._click-animation._click-animation-middle {
+  border-color: lime !important;
+}
+
+._click-animation._click-animation-right {
+  border-color: cyan !important;
+}
+
+@keyframes drop {
+  from {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+
+  to {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+}
